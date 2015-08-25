@@ -28,6 +28,7 @@
 		<!-- sources in alphabetical order-->
 		<module>ftp-source</module>
 		<module>http-source</module>
+		<module>load-generator-source</module>
 		<module>time-source</module>
 		<!-- processors in alphabetical order -->
 		<module>filter-processor</module>
@@ -38,6 +39,7 @@
 		<module>counter-sink</module>
 		<module>log-sink</module>
 		<module>redis-sink</module>
+		<module>throughput-sink</module>
 		<!-- tasks in alphabetical order -->
 		<module>timestamp-task</module>
 	</modules>

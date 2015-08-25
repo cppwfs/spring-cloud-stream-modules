@@ -14,13 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.cloud.stream.module.log;
-
-import static org.junit.Assert.assertNotNull;
+package org.springframework.cloud.stream.module.throughput;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.cloud.stream.annotation.ModuleChannels;
@@ -29,14 +26,16 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import static org.junit.Assert.assertNotNull;
+
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = LogSinkApplication.class)
+@SpringApplicationConfiguration(classes = ThroughputSinkApplication.class)
 @WebAppConfiguration
 @DirtiesContext
-public class LogSinkApplicationTests {
+public class ThroughputSinkApplicationTests {
 
 	@Autowired
-	@ModuleChannels(LogSink.class)
+	@ModuleChannels(ThroughputSink.class)
 	private Sink sink;
 
 	@Autowired
