@@ -36,8 +36,8 @@ public class TimestampTaskIntegrationTests {
 	@Test
 	public void testOverride() throws Exception {
 		final String TEST_DATE_DOTS = ".......";
-		final String SUCCESS_MESSAGE = "Job: [SimpleJob: [name=job]] completed with the following parameters: [{-format=yyyy.......}] and the following status: [COMPLETED]";
-		String[] args = { "--format=yyyy" + TEST_DATE_DOTS };
+		final String SUCCESS_MESSAGE = "-format=yyyy.......}] and the following status: [COMPLETED]";
+		String[] args = { "--next", "--format=yyyy" + TEST_DATE_DOTS };
 
 		assertEquals(0, SpringApplication.exit(SpringApplication
 				.run(TimestampTaskApplication.class, args)));
